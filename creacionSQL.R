@@ -8,3 +8,9 @@ dbWriteTable(mydb, "emp_department", emp_department)
 dbWriteTable(mydb, "emp_details", emp_details)
 dbListTables(mydb)
 dbDisconnect(mydb)
+
+
+
+
+mydb <- dbConnect(RSQLite::SQLite(), "my-db.sqlite")
+dbGetQuery(mydb, 'SELECT * FROM salesman')
