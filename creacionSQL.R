@@ -14,3 +14,8 @@ dbDisconnect(mydb)
 
 mydb <- dbConnect(RSQLite::SQLite(), "my-db.sqlite")
 dbGetQuery(mydb, 'SELECT * FROM salesman')
+dbGetQuery(mydb, 'SELECT salesman.name AS "Salesman",
+customer.cust_name, customer.city 
+FROM salesman,customer 
+WHERE salesman.city=customer.city;')
+
