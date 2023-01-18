@@ -83,6 +83,20 @@ dbGetQuery(mydb, 'SELECT * FROM emp_details') %>%
   kable_styling(font_size = 5)
 ```
 
+
+## SQL JOINS
+
+
+![ejer 11-1](figs/sqljoin.jpeg){height=100%}
+
+##
+
+![SQL JOIN parte 1](figs/sqljoin1.png){height=100%}
+
+##
+
+![SQL JOIN parte 2](figs/sqljoin2.png){height=100%}
+
 ## Ejercicios
 
 1.  From the following tables write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city. (salesman, customer)
