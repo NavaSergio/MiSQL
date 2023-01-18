@@ -148,3 +148,12 @@ dbGetQuery(mydb, 'SELECT * FROM emp_details') %>%
 ```{r cerrarconexion, echo=TRUE}
 dbDisconnect(mydb)
 ```
+
+**Referencias**:
+
+- [Presentación: Introducción a SQL](https://www.cs.us.es/cursos/bd/temas/BD-Tema-5.pdf)
+- [SQLite interface for R](https://rsqlite.r-dbi.org/)
+- [SQL Tutorial](https://www.w3schools.com/sql/default.asp)
+= [Curso Bienvenido a SQL | Khan Academy](https://es.khanacademy.org/computing/computer-programming/sql/sql-basics/v/welcome-to-sql)
+- [SQL JOINS - Exercises, Practice](https://www.w3resource.com/sql-exercises/sql-joins-exercises.php)
+- [Una hoja de atajos de SQL](https://learnsql.com/blog/sql-basics-cheat-sheet/sql-basics-cheat-sheet-letter.pdf)
