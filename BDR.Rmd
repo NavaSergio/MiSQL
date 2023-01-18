@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```{r bibliotecas, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 
-packages <- c("tidyverse","RSQLite")
+packages <- c("tidyverse","RSQLite","knitr","kableExtra")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
   install.packages(setdiff(packages, rownames(installed.packages())), repos = "http://cran.rstudio.com") 
 }
@@ -29,12 +29,58 @@ dbListTables(mydb)
 dbListFields(mydb, "salesman")
 ```
 
+## Tablas
+
+```{r tablas1, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM salesman') %>%
+  kable(caption="salesman") %>%
+  kable_styling(font_size = 5)
+```
+
+
+```{r tablas2, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM customer') %>%
+  kable(caption="customer") %>%
+  kable_styling(font_size = 5)
+```
+
 ##
 
-Ejecutamos la primer consulta
+```{r tablas3, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM orders') %>%
+  kable(caption="orders") %>%
+  kable_styling(font_size = 5)
+```
 
-```{r consulta1, echo=TRUE}
-dbGetQuery(mydb, 'SELECT * FROM salesman')
+
+```{r tablas4, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM company_mast') %>%
+  kable(caption="company mast") %>%
+  kable_styling(font_size = 5)
+```
+
+
+##
+
+```{r tablas5, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM item_mast') %>%
+  kable(caption="item mast") %>%
+  kable_styling(font_size = 5)
+```
+
+
+```{r tablas6, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM emp_department') %>%
+  kable(caption="emp department") %>%
+  kable_styling(font_size = 5)
+```
+
+##
+
+```{r tablas7, echo=FALSE}
+dbGetQuery(mydb, 'SELECT * FROM emp_details') %>%
+  kable(caption="emp details") %>%
+  kable_styling(font_size = 5)
 ```
 
 ## Ejercicios
